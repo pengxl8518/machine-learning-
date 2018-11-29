@@ -251,6 +251,9 @@ def gradient_checking(theta, X, y, epsilon, regularized=False):
 
 gradient_checking(theta, X, y, epsilon=0.0001, regularized=True)#这个运行很慢，谨慎运行
 
+
+#函数原型：  numpy.random.uniform(low,high,size)
+#功能：从一个均匀分布[low,high)中随机采样，注意定义域是左闭右开，即包含low，不包含high.
 def random_init(size):
     return np.random.uniform(-0.12, 0.12, size)
 
