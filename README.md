@@ -5,5 +5,5 @@
 
 * 1：章节内容
 
- ![linear] https://img-blog.csdn.net/20180424175304251
+ ![linear] https://github.com/pengxl8518/machine-learning-/blob/master/%E4%B8%89%E7%9B%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6.jpg
  
