@@ -11,14 +11,19 @@
 * 3：代码实现的逻辑
    
    1、加载可视化元素像素数据
+   
    2、将提供好的theta值代入前馈网络中，并求解网络中每个神经元的值
+   
    3、初始化theata值在(low,hight)之间，定义损失函数、带正则化的损失函数，并调用别人写好的函数求解出theta值。
+   
    4、评估准确度
+   
    5、可视化输出结果。似乎并不理想。
+   
    
 * 4：代码中觉得写的很不错的
 
-1、降为函数
+   1、降为函数
 
    ```
    # ravel 用于降维，默认降维的顺序为行序优先。与其用相似的还用flatten
@@ -26,29 +31,29 @@
        return np.concatenate((np.ravel(a), np.ravel(b)))
    ```
 
-2、转化维度
-```
-def deserialize(seq):
-#     """into ndarray of (25, 401), (10, 26)"""
-    return seq[:25 * 401].reshape(25, 401), seq[25 * 401:].reshape(10, 26)
-```
+   2、转化维度
+   ```
+   def deserialize(seq):
+   #     """into ndarray of (25, 401), (10, 26)"""
+       return seq[:25 * 401].reshape(25, 401), seq[25 * 401:].reshape(10, 26)
+   ```
 
-3、初始化theta值函数
+   3、初始化theta值函数
 
-```
-def random_init(size):
-    return np.random.uniform(-0.12, 0.12, size)
-
-```
+   ```
+   def random_init(size):
+       return np.random.uniform(-0.12, 0.12, size)
+   
+   ```
  
-4、编码函数（上一章的代码）
+   4、编码函数（上一章的代码）
 
-```
-#将y值从1-10的真实值，映射成一个10×5000维的矩阵，每一行代表一个值的0/1映射转换
-for k in range(1, 11):
-    y_matrix.append((raw_y == k).astype(int))
+   ```
+   #将y值从1-10的真实值，映射成一个10×5000维的矩阵，每一行代表一个值的0/1映射转换
+   for k in range(1, 11):
+      y_matrix.append((raw_y == k).astype(int))
 
-```
+   ```
 
 
-  ![图片测试](https://github.com/pengxl8518/machine-learning-/blob/master/%E4%B8%89%E7%9B%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%A1%86%E6%9E%B6.jpg)
+  ![输出结果可视化](https://raw.githubusercontent.com/pengxl8518/machine-learning-/master/figure_1.png
